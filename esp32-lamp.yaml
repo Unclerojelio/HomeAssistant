@@ -1,13 +1,13 @@
 mqtt:
   - light:
       name: "Atomic Fire Lamp"
-      command_topic: "set/esp32-mac/power"
-      state_topic: "status/esp32-mac/power"
-      brightness_command_topic: "set/esp32-mac/brightness"
-      brightness_state_topic: "status/esp32-mac/brightness"
+      command_topic: "set/esp32-4022d8ee50a0/power"
+      state_topic: "status/esp32-4022d8ee50a0/power"
+      brightness_command_topic: "set/esp32-4022d8ee50a0/brightness"
+      brightness_state_topic: "status/esp32-4022d8ee50a0/brightness"
       brightness_scale: 255
-      rgb_command_topic: "set/esp32-mac/rgb"
-      rgb_state_topic: "status/esp32-mac/rgb"
-      effect_command_topic: "set/esp32-mac/effect"
-      effect_state_topic: "status/esp32-mac/effect"
-      effect_list: ["Rainbow", "Fire", "Solid", "Revolve"]
+      rgb_command_topic: "set/esp32-4022d8ee50a0/rgb"
+      rgb_state_topic: "status/esp32-4022d8ee50a0/rgb"
+      effect_command_topic: "set/esp32-4022d8ee50a0/effect"
+      effect_state_topic: "status/esp32-4022d8ee50a0/effect"
+      effect_list: ["Rainbow", "Fire", "Solid", "Spin"]
