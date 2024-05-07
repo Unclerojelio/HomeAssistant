@@ -1,0 +1,31 @@
+esphome:
+  name: living-room-temperature
+  friendly_name: Living Room Temperature
+
+esp32:
+  board: esp32dev
+  framework:
+    type: arduino
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "iqDLCvmAXCWvMsAHIR3BPE5gMgdgfNZTMChc534ya3k="
+
+ota:
+  password: "1a54b0ee3fbd3db116ed935045fb3d24"
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Living-Room-Temperature"
+    password: "695eBO5rroDI"
+
+captive_portal:
+    

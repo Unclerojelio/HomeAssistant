@@ -1,0 +1,35 @@
+
+# Loads default set of integrations. Do not remove.
+default_config:
+
+# Load frontend themes from the themes folder
+frontend:
+  themes: !include_dir_merge_named themes
+
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+
+mqtt:
+  - light:
+      name: "Atomic Fire Lamp"
+      command_topic: "set/esp32-4022d8ee50a0/power"
+      state_topic: "status/esp32-4022d8ee50a0/power"
+      brightness_command_topic: "set/esp32-4022d8ee50a0/brightness"
+      brightness_state_topic: "status/esp32-4022d8ee50a0/brightness"
+      brightness_scale: 255
+      rgb_command_topic: "set/esp32-4022d8ee50a0/rgb"
+      rgb_state_topic: "status/esp32-4022d8ee50a0/rgb"
+      effect_command_topic: "set/esp32-4022d8ee50a0/effect"
+      effect_state_topic: "status/esp32-4022d8ee50a0/effect"
+      effect_list: ["Rainbow", "Fire", "Solid", "White"]
+
+  - sensor:
+      - name: "Cubic Feet"
+        state_topic: "energy/SCMplus/76147453"
+        unit_of_measurement: 'ft³'
+        force_update: true
+        value_template: "{{ value_json.Consumption }}"
+        unique_id: "cubic_feet_sensor"
+        device_class: gas
+        state_class: total

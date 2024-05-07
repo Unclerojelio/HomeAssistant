@@ -1,0 +1,5 @@
+*.log*
+secrets.yaml
+*.db*
+.storage/
+.cloud
